@@ -13,8 +13,8 @@ function setup() {
 
 function draw() {
   noStroke();
-  //noLoop();
-  for(let i = 0; i < myArr.length; i++) {
+  noLoop();
+  for (let i = 0; i < myArr.length; i++) {
     fill(myArr[i]);
     rect(xPos,0,width/256,height);
     xPos + xPos+(width/256);

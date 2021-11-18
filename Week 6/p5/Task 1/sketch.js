@@ -13,7 +13,7 @@ function setup() {
 
 function draw() {
   noStroke();
-  noLoop();
+  //noLoop();
   for(let i = 0; i < myArr.length; i++) {
     fill(myArr[i]);
     rect(xPos,0,width/256,height);

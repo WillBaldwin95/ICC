@@ -2,11 +2,12 @@
 
 function setup() {
   createCanvas(500,500);
-  background(255);
+  //background(255);
 }
 
 function draw(){
   let unit = 25;
+  background(255);
   for (let x = 25; x < width; x = x + 50) {
     for (let y = 25; y < height; y = y + 50){
 
@@ -17,9 +18,12 @@ function draw(){
 		case "2":
 			squares(x,y,25);
 		break;
+		case "3":
+			circles(x,y,50);
+		break;
 	}
 	
-			//circles(x,y,25);
+			
   } 
 } 
 }
@@ -43,11 +47,9 @@ function squares(xVal, yVal, unit) {
 	rect(xVal, yVal, xVal + unit, yVal + unit);
 }
 
-//function circles(xVal, yVal, unit) {
-	//stroke(0);
-	//strokeWeight(1);
+function circles(xVal, yVal, unit) {
 
-	//circles(xVal, yVal, xVal + unit);
-//}
+	circle(xVal, yVal, unit);
+}
 
 //fill(random(255), 0, random(255));

@@ -1,24 +1,19 @@
-let myArr = [];
-let xPos = 0;
+let x =[]
 
-
-function setup() {
-  createCanvas(1024,400);
-  background(255);
-  for (let i = 0; i < 256; i++) {
-    myArr.push(i);
-    myArr = shuffle(myArr);
-    //myArr.reverse();
+function setup(){
+  createCanvas(800,600);
+  noStroke();
+  fill(255,200);
+  for(let i=0; i<300; i++){
+    x[i] = random(-1000,200);
   }
-  //console.log(myArr);
 }
 
 function draw() {
-  noStroke();
-  noLoop();
-  for (let i = 0; i < myArr.length; i++) {
-    fill(myArr[i],0,120);
-    rect(xPos,0,width/256,height);
-    xPos = xPos+(width/256);
+  background(0);
+  for(let i=0; i<300; i++){
+    x[i] += 2.5;
+    let y = i * 4.0;
+    arc(x[i],y,12,12,0.52,5.76);
   }
 }

@@ -6,24 +6,24 @@ let x = [];
 let y = [];
 
 function setup() {
-  createCanvas(800,600);
-  noStroke();
-  fill(255,200);
-  for(let i=0; i<300; i++){
-    x[i] = 0;
-    y[i] = 0;
+  createCanvas(800,600);      //800 by 600 pxl canvas
+  noStroke();                 //no outline
+  fill(255,200);              //colour canvas greyscale
+  for(let i=0; i<300; i++){   //increasing x and y values from 0 to 300
+    x[i] = 0;                 //x value = i
+    y[i] = 0;                 //y value = i
   }
 }
 
-function draw() {
-  background(0);
-  for(let i=num-1; 1>0; i--) {
+function draw() { 
+  background(0);              //black background
+  for(let i=num-1; i>0; i--) {//i = 119 reducing to 0
     x[i] = x[i-1];
     y[i] = y[i-1];
   }
 
-  x[0] = mouseX;
-  y[0] = mouseY;
+  x[0] = mouseX;              //x position following mouse
+  y[0] = mouseY;              //y position following mouse
 
   for(let i=0; i<num; i++){
     fill(i*0.94);

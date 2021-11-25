@@ -1,19 +1,30 @@
-let x =[]
+let myArr = [];
+let mySentence = "I like/love creative coding, so far";
+let chopper;
+let likelove;
+let xPos = 0;
 
 function setup(){
-  createCanvas(800,600);
-  noStroke();
-  fill(255,200);
-  for(let i=0; i<300; i++){
-    x[i] = random(-1000,200);
-  }
+  createCanvas(800,200);
+  frameRate(2);
+  background(255);
+  chopper = mySentence.split(" ");
+  likeLove = chopper[1].split("/");
+  chopper[1] = likeLove[1];
+  //console.log(chopper);
+  //chopper = chopper.reverse();
+  //chopper = chopper.join(" ");
+  //chopper = shuffle(chopper);
 }
+function draw(){
+  background(255);
+  for (let i=0; i<chopper.length; i++) {
 
-function draw() {
-  background(0);
-  for(let i=0; i<300; i++){
-    x[i] += 2.5;
-    let y = i * 4.0;
-    arc(x[i],y,12,12,0.52,5.76);
+    text(chopper[i], xPos, random(10,height));
+    xPos = xPos+(width/1000);
+    if(xPos > width){
+      xPos = 0;
+    }
   }
+  
 }

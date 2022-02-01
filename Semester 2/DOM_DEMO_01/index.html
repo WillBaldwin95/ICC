@@ -2,15 +2,27 @@
 <html>
     <head>
        <meta charset="UTF-8">
-       <title>DOM DEMO</title>
-       <script>
-        function sayHello(){
-            alert("TASK 2");
-        }
+        <title>DOM DEMO</title>
+            <script src = "demo.js">
             </script>
+
+        <style>
+            .divAnim01{
+                border: 5px outset red;
+                background-color: lightblue;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <script>document.write("HELLO WHIRRRLD")</script>
         <button onclick="sayHello()">Don't Press!</button>
+        <div id="divAnim01">
+            <h2>
+                <button onclick="start()">Start!</button>
+                <button onclick="stop()">Stop!</button>
+            </h2>
+            <img src="images/NoEntry.png" alt="" width="250" height="250">    
+        </div>
     </body>
 </html>
